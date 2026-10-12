@@ -2,11 +2,11 @@
 
 USPS / GOFO / SpeedX 物流标签批处理与表格自动化工具。此仓库仅用于分发软件与更新说明。
 
-## 推荐下载：v2.12.3
+## 推荐下载：v2.12.4
 
-- **[Windows x64 安装版（推荐）](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.12.3/USPS_GOFO_Label_Tool-2.12.3-Windows-x64-Setup.exe)**
-- [Windows x64 便携版](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.12.3/USPS_GOFO_Label_Tool-2.12.3-Windows-x64-Portable.zip)
-- [版本说明及文件校验值](https://github.com/yxuliang/logistics-tool-updates/releases/tag/v2.12.3)
+- **[Windows x64 安装版（推荐）](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.12.4/USPS_GOFO_Label_Tool-2.12.4-Windows-x64-Setup.exe)**
+- [Windows x64 便携版](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.12.4/USPS_GOFO_Label_Tool-2.12.4-Windows-x64-Portable.zip)
+- [版本说明及文件校验值](https://github.com/yxuliang/logistics-tool-updates/releases/tag/v2.12.4)
 - [全部历史版本](https://github.com/yxuliang/logistics-tool-updates/releases)
 
 支持 Windows 10/11 x64，不需要安装 Python。本次没有 macOS 成品。
@@ -21,6 +21,8 @@ GitHub 自动生成的 Source code 压缩包只有本仓库说明，不是软件
 初始版本 **v2.11.1** 保留在历史记录中。它的 GitHub 下载跳转兼容问题已在 **v2.11.2** 修复。
 **2.11.1 及更早版本需要通过本页手动安装最新版本一次，不能依赖旧版的更新入口完成修复。2.11.2 及以上用户可从软件内直接升级。**
 
+2.12.4 将智猴仓-美中邮编同步改为 60191；内置 SKU 新增 259 个，重复 208 个已跳过，共 2955 个，保留所有数字及前导 0。升级后自动与本机自定义 SKU 合并使用，不覆盖旧库；SKU 导入支持无表头单列表及空白工作表。主界面统一深蓝青绿配色和工具图标，归序窗口精简布局、按需显示算账设置、提供可拉大的结果日志与一键复制。原有分类与面单处理规则不变。邮编工具遇到已有不同邮编仍默认保留并提示，需要替换时请确认覆盖。
+
 2.12.3 新增归序按 SKU 分三类：同一运单号多 SKU 集中放入“多个SKU同一运单号”；本批只对应一个运单号的 SKU 放入“唯一SKU的PDF”；其他按“SKU_数量N”分类（N 为成功复制的商品件数）。整批放在 PDF 来源文件夹内新建的归序总文件夹，只复制并保留旧结果，再次扫描自动跳过旧批次。以本次导入 PDF 为范围，忽略表格其他运单号；修复空白格式延伸造成的表格范围超限误报。默认“仅PDF整理”，无需价格表；旧分类和原算账口径保留。
 
 2.12.2 修复 USPS 图片参考号相邻字符（如 YV）粘连导致少分一段的误拦截。仍需人工确认，且保留位置、尺寸、单行及 UPC 写入区空白检查；不改条码、原参考号或映射表数字。升级后仅重新处理失败的原始 PDF，无需重跑已成功文件。
@@ -29,7 +31,7 @@ GitHub 自动生成的 Source code 压缩包只有本仓库说明，不是软件
 
 2.12.0 新增“归序整理与算账”独立窗口：拖入订单表和 PDF 文件夹，按 SKU 分类，仅复制、不剪切，保留原文件和旧结果。独立价格表支持官发/代发算账，并提供历史记录、备注和导出；与 SKU 校验库互不干涉。
 
-第一次使用，在新窗口“管理价格表”导入含“产品名称、SKU、代发价格、官发价格”的表格并保存。算账按有效订单表全部订单汇总，不以 PDF 是否找到为条件；缺价不当作 0，联合模式价格命中不足 95% 时只整理。旧归序软件价格表需手动导出后导入。
+首次使用算账功能，在新窗口“管理价格表”导入含“产品名称、SKU、代发价格、官发价格”的表格并保存。算账按有效订单表全部订单汇总，不以 PDF 是否找到为条件；缺价不当作 0，联合模式价格命中不足 95% 时只整理。旧归序软件价格表需手动导出后导入。
 
 2.11.4 新增：在“高级兼容”中可人工忽略 GTIN 校验位异常，按映射表原码和数量处理，保留全部数字和前导 0，报告记录人工忽略。默认关闭，更换映射表或重开软件后自动关闭；其他错误仍拦截。忽略校验不代表编码正确，请先核实映射表。
 
