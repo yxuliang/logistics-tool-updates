@@ -2,11 +2,11 @@
 
 USPS / GOFO / SpeedX 物流标签批处理与表格自动化工具。此仓库仅用于分发软件与更新说明。
 
-## 推荐下载：v2.12.4
+## 推荐下载：v2.12.5
 
-- **[Windows x64 安装版（推荐）](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.12.4/USPS_GOFO_Label_Tool-2.12.4-Windows-x64-Setup.exe)**
-- [Windows x64 便携版](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.12.4/USPS_GOFO_Label_Tool-2.12.4-Windows-x64-Portable.zip)
-- [版本说明及文件校验值](https://github.com/yxuliang/logistics-tool-updates/releases/tag/v2.12.4)
+- **[Windows x64 安装版（推荐）](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.12.5/USPS_GOFO_Label_Tool-2.12.5-Windows-x64-Setup.exe)**
+- [Windows x64 便携版](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.12.5/USPS_GOFO_Label_Tool-2.12.5-Windows-x64-Portable.zip)
+- [版本说明及文件校验值](https://github.com/yxuliang/logistics-tool-updates/releases/tag/v2.12.5)
 - [全部历史版本](https://github.com/yxuliang/logistics-tool-updates/releases)
 
 支持 Windows 10/11 x64，不需要安装 Python。本次没有 macOS 成品。
@@ -20,6 +20,8 @@ GitHub 自动生成的 Source code 压缩包只有本仓库说明，不是软件
 
 初始版本 **v2.11.1** 保留在历史记录中。它的 GitHub 下载跳转兼容问题已在 **v2.11.2** 修复。
 **2.11.1 及更早版本需要通过本页手动安装最新版本一次，不能依赖旧版的更新入口完成修复。2.11.2 及以上用户可从软件内直接升级。**
+
+2.12.5 修复 ZH 数字型 SKU 带尾缀时，与其内部数字 SKU 重复命中导致的误报。保留完整 ZH 标准 SKU，仅排除该命中内部的重复数字候选，其他独立 SKU 冲突仍报警。保留前导 0，不截短连续数字、不修改 GTIN 校验位。新增 nitro-hong，内置库共 2956 个，升级保留本机自定义库。更新后请用 G 列为空的原始订单表重新清洗，另存新结果。
 
 2.12.4 将智猴仓-美中邮编同步改为 60191；内置 SKU 新增 259 个，重复 208 个已跳过，共 2955 个，保留所有数字及前导 0。升级后自动与本机自定义 SKU 合并使用，不覆盖旧库；SKU 导入支持无表头单列表及空白工作表。主界面统一深蓝青绿配色和工具图标，归序窗口精简布局、按需显示算账设置、提供可拉大的结果日志与一键复制。原有分类与面单处理规则不变。邮编工具遇到已有不同邮编仍默认保留并提示，需要替换时请确认覆盖。
 
