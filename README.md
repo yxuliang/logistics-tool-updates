@@ -2,11 +2,11 @@
 
 USPS / GOFO / SpeedX 物流标签批处理与表格自动化工具。此仓库仅用于分发软件与更新说明。
 
-## 推荐下载：v2.13.0
+## 推荐下载：v2.13.1
 
-- **[Windows x64 安装版（推荐）](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.13.0/USPS_GOFO_Label_Tool-2.13.0-Windows-x64-Setup.exe)**
-- [Windows x64 便携版](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.13.0/USPS_GOFO_Label_Tool-2.13.0-Windows-x64-Portable.zip)
-- [版本说明及文件校验值](https://github.com/yxuliang/logistics-tool-updates/releases/tag/v2.13.0)
+- **[Windows x64 安装版（推荐）](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.13.1/USPS_GOFO_Label_Tool-2.13.1-Windows-x64-Setup.exe)**
+- [Windows x64 便携版](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.13.1/USPS_GOFO_Label_Tool-2.13.1-Windows-x64-Portable.zip)
+- [版本说明及文件校验值](https://github.com/yxuliang/logistics-tool-updates/releases/tag/v2.13.1)
 - [全部历史版本](https://github.com/yxuliang/logistics-tool-updates/releases)
 
 支持 Windows 10/11 x64，不需要安装 Python。本次没有 macOS 成品。
@@ -20,6 +20,8 @@ GitHub 自动生成的 Source code 压缩包只有本仓库说明，不是软件
 
 初始版本 **v2.11.1** 保留在历史记录中。它的 GitHub 下载跳转兼容问题已在 **v2.11.2** 修复。
 **2.11.1 及更早版本需要通过本页手动安装最新版本一次，不能依赖旧版的更新入口完成修复。2.11.2 及以上用户可从软件内直接升级。**
+
+2.13.1 已内置确认的同品 SKU 对应关系。日常“发货 SKU 复核”只需原表和最终发货表，无需重复导入关系表。新增“补充同品关系”入口，只导入新增内容，预览后保存，重复跳过、冲突提示，不覆盖旧关系。本机补充重启及升级后保留，不自动上传或跨电脑同步。初始库仅含已授权公开的 SKU 对应关系，不含源表、图片、价格或订单。
 
 2.13.0 新增“发货 SKU 复核”独立窗口：拖入原始导出表、最终发货表和同品 SKU 对照表，按运单核对商品及数量。支持多仓 SKU 和一单多商品，原表未进入本次发货的订单仅提示。产品不符、数量变化、缺单或关系缺失分别报警，另存标红结果，支持复制运单及报错。不自动修改最终 SKU，不覆盖原文件，订单与同品对照仅在本机处理。升级后主界面点击“发货 SKU 复核”使用。
 
@@ -48,7 +50,7 @@ GitHub 自动生成的 Source code 压缩包只有本仓库说明，不是软件
 
 ## 功能
 
-- 发货 SKU 复核：按运单比较原表与最终发货表的同品及数量，异常标红；独立于 SKU 清洗。
+- 发货 SKU 复核：按运单比较原表与最终发货表的同品及数量，异常标红；默认同品库和增量补充入口，独立于 SKU 清洗。
 
 - USPS、GOFO、SpeedX 面单和拣货单批处理，支持一单多 UPC，异常订单单独报告。
 - SKU 新增入库、重复跳过、校验清理；独立于面单映射功能。
@@ -59,7 +61,7 @@ GitHub 自动生成的 Source code 压缩包只有本仓库说明，不是软件
 ## 数据与安全
 
 业务 PDF、Excel、处理报告及本机新增 SKU 在本地处理，不上传到本仓库。
-软件包包含用户已授权公开的内置 SKU 库。升级不删除独立保存在本机的 SKU 库、归序价格表和历史记录；这些用户数据不上传。
+软件包包含用户已授权公开的内置 SKU 库和初始同品 SKU 对应关系，不含来源 Excel、图片、价格或订单。本机补充的关系不自动上传。升级不删除独立保存在本机的 SKU 库、归序价格表和历史记录；这些用户数据不上传。
 不安装后台服务，不开机自启；只有用户主动检查或下载更新时联网。
 
 安装包尚未进行商业代码签名。请核对下载来源及 SHA-256，并遵守设备安全策略，不要关闭系统安全防护。
