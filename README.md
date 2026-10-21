@@ -2,11 +2,11 @@
 
 USPS / GOFO / SpeedX 物流标签批处理与表格自动化工具。此仓库仅用于分发软件与更新说明。
 
-## 推荐下载：v2.13.1
+## 推荐下载：v2.13.2
 
-- **[Windows x64 安装版（推荐）](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.13.1/USPS_GOFO_Label_Tool-2.13.1-Windows-x64-Setup.exe)**
-- [Windows x64 便携版](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.13.1/USPS_GOFO_Label_Tool-2.13.1-Windows-x64-Portable.zip)
-- [版本说明及文件校验值](https://github.com/yxuliang/logistics-tool-updates/releases/tag/v2.13.1)
+- **[Windows x64 安装版（推荐）](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.13.2/USPS_GOFO_Label_Tool-2.13.2-Windows-x64-Setup.exe)**
+- [Windows x64 便携版](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.13.2/USPS_GOFO_Label_Tool-2.13.2-Windows-x64-Portable.zip)
+- [版本说明及文件校验值](https://github.com/yxuliang/logistics-tool-updates/releases/tag/v2.13.2)
 - [全部历史版本](https://github.com/yxuliang/logistics-tool-updates/releases)
 
 支持 Windows 10/11 x64，不需要安装 Python。本次没有 macOS 成品。
@@ -20,6 +20,8 @@ GitHub 自动生成的 Source code 压缩包只有本仓库说明，不是软件
 
 初始版本 **v2.11.1** 保留在历史记录中。它的 GitHub 下载跳转兼容问题已在 **v2.11.2** 修复。
 **2.11.1 及更早版本需要通过本页手动安装最新版本一次，不能依赖旧版的更新入口完成修复。2.11.2 及以上用户可从软件内直接升级。**
+
+2.13.2 已按最新对应表更新同品 SKU 关系，补充 hawas-exotic、hawas-jin 与 ZH-0614514331057 的对应。兼容有效 GTIN 仅前导补零差异，原 SKU、UPC、前导 0 和最后一位全部保留；真正的关系冲突仍提示。本机补充保留，标准 SKU 清洗库与面单规则不变；不上传源表或订单数据。
 
 2.13.1 已内置确认的同品 SKU 对应关系。日常“发货 SKU 复核”只需原表和最终发货表，无需重复导入关系表。新增“补充同品关系”入口，只导入新增内容，预览后保存，重复跳过、冲突提示，不覆盖旧关系。本机补充重启及升级后保留，不自动上传或跨电脑同步。初始库仅含已授权公开的 SKU 对应关系，不含源表、图片、价格或订单。
 
