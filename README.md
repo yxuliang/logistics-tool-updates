@@ -2,11 +2,11 @@
 
 USPS / GOFO / SpeedX 物流标签批处理与表格自动化工具。此仓库仅用于分发软件与更新说明。
 
-## 推荐下载：v2.14.1
+## 推荐下载：v2.14.2
 
-- **[Windows x64 安装版（推荐）](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.14.1/USPS_GOFO_Label_Tool-2.14.1-Windows-x64-Setup.exe)**
-- [Windows x64 便携版](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.14.1/USPS_GOFO_Label_Tool-2.14.1-Windows-x64-Portable.zip)
-- [版本说明及文件校验值](https://github.com/yxuliang/logistics-tool-updates/releases/tag/v2.14.1)
+- **[Windows x64 安装版（推荐）](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.14.2/USPS_GOFO_Label_Tool-2.14.2-Windows-x64-Setup.exe)**
+- [Windows x64 便携版](https://github.com/yxuliang/logistics-tool-updates/releases/download/v2.14.2/USPS_GOFO_Label_Tool-2.14.2-Windows-x64-Portable.zip)
+- [版本说明及文件校验值](https://github.com/yxuliang/logistics-tool-updates/releases/tag/v2.14.2)
 - [全部历史版本](https://github.com/yxuliang/logistics-tool-updates/releases)
 
 支持 Windows 10/11 x64，不需要安装 Python。本次没有 macOS 成品。
@@ -21,7 +21,9 @@ GitHub 自动生成的 Source code 压缩包只有本仓库说明，不是软件
 初始版本 **v2.11.1** 保留在历史记录中。它的 GitHub 下载跳转兼容问题已在 **v2.11.2** 修复。
 **2.11.1 及更早版本需要通过本页手动安装最新版本一次，不能依赖旧版的更新入口完成修复。2.11.2 及以上用户可从软件内直接升级。**
 
-2.14.1 将订单拆单编号独立为一个窗口：拖入 XLSX 后预览，另存完整拆单表。整张源表按不同运单的首次出现顺序添加后缀，同一运单多行共用编号，单运单保持原号。智猴发货表保留输入的订单号，不再自动拆单，继续显示各物流表唯一订单数；需要拆单时先导出拆单表，再导入智猴发货表。保留全部商品行，原文件不修改。
+2.14.2 将 GOFO、USPS、SpeedX 合并到一张智猴发货表，未导出记录另存，保留22列模板、源表商品行顺序及全部明细。显示去重运单总数和各物流商去重运单数：同一运单多行商品只计一次，同一订单不同运单分别计数，未导出数据不计入。统计表示本批待导入 ERP 的运单数量，实际导入成功数以 ERP 结果为准。独立拆单功能保持不变，输入订单号及源文件不修改。
+
+历史版本 2.14.1 将订单拆单编号独立为一个窗口：拖入 XLSX 后预览，另存完整拆单表。整张源表按不同运单的首次出现顺序添加后缀，同一运单多行共用编号，单运单保持原号。智猴发货表保留输入的订单号，不再自动拆单，继续显示各物流表唯一订单数；需要拆单时先导出拆单表，再导入智猴发货表。保留全部商品行，原文件不修改。
 
 历史版本 2.14.0 的智猴发货表新增各物流商唯一订单数统计，按最终输出订单号去重，不删除任何商品行。同一原订单按不同运单首次出现顺序添加 -1、-2、-3 等后缀，同一运单的多行商品共用编号；整张源表统一编号，未导出表也保留后缀，但不计入三个物流表的唯一订单数。单运单保持原号，生成编号自动避开已占用订单号；原文件不修改。
 
@@ -64,7 +66,7 @@ GitHub 自动生成的 Source code 压缩包只有本仓库说明，不是软件
 
 - USPS、GOFO、SpeedX 面单和拣货单批处理，支持一单多 UPC，异常订单单独报告。
 - SKU 新增入库、重复跳过、校验清理；独立于面单映射功能。
-- ITA 订单金额回填、仓库邮编、按物流商生成智猴发货表。
+- ITA 订单金额回填、仓库邮编、三家物流合并智猴发货表及去重运单统计。
 - 归序 PDF 分类、独立价格表、官发/代发算账及历史导出；原 PDF 内容不变。
 - 单击物流单号复制；处理结果右键复制、Ctrl+C 复制选中行，完整报错及详情通过右键菜单查看。
 
